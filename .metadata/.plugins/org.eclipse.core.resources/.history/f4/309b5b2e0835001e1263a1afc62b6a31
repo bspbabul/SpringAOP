@@ -1,0 +1,5 @@
+package com.motivity.model;
+
+public class LoggerMessage {
+
+}

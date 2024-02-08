@@ -1,0 +1,5 @@
+package com.javatechie.os.Aspect;
+
+public class LoggingAOP {
+
+}

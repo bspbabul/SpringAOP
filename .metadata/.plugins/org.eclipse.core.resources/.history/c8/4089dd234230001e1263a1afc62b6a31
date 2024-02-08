@@ -1,0 +1,25 @@
+package com.javatechie.os.Aspect;
+
+import org.aspectj.lang.ProceedingJoinPoint;
+import org.aspectj.lang.annotation.Aspect;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import com.fasterxml.jackson.databind.ObjectMapper;
+
+@Aspect
+public class LoggingAOP {
+	
+	
+	private static final Logger log = LoggerFactory.getLogger(LoggingAOP.class);
+
+	
+	public Object applicationLogger(ProceedingJoinPoint pjp) {
+		ObjectMapper mapper =new ObjectMapper();
+		String Methodname=pjp.getSignature().getName();
+		String Classname=pjp.getClass().getName();
+		Object arr[]=pjp.getArgs();
+		log.info(" ClassName : "+Classname+" MethodName : "+Methodname+"()"+" Arguments are "+mapper.writeValueAsString(arr));
+	}
+
+}

@@ -1,0 +1,5 @@
+package com.motivity.advice;
+
+public class LoggingAspect {
+
+}

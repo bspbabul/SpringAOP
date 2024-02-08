@@ -1,0 +1,28 @@
+package com.motivity.service;
+
+import java.util.List;
+import java.util.Optional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.motivity.entity.Employees;
+import com.motivity.exception.EmployeeNotFoundException;
+import com.motivity.repository.EmployeeRepository;
+
+
+@Service
+public class EmployeeService {
+	
+	@Autowired
+	public EmployeeRepository employeeRepository;
+	
+	public List<Employees> getAllEmployee(){
+		return employeeRepository.findAll();
+	}
+	
+	public Optional<Employees> getbyId(long Employeeid){
+		return Optional.ofNullable(employeeRepository.findById(Employeeid).orElseThrow(()->new EmployeeNotFoundException("Employees not found from these Ids")));
+	}
+
+}

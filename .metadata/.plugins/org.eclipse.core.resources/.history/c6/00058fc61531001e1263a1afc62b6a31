@@ -1,0 +1,13 @@
+package com.motivity.exception;
+
+import java.util.function.Supplier;
+
+public class EmployeeNotFoundException implements Supplier {
+
+	@Override
+	public Object get() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

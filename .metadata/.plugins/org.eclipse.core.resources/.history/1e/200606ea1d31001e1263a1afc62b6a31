@@ -1,0 +1,5 @@
+package com.motivity.exception;
+
+public class ErrorDetails {
+
+}

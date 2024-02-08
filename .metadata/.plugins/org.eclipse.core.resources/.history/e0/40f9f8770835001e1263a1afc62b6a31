@@ -1,0 +1,18 @@
+package com.motivity.model;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+public class LoggerMessage {
+	private String Classname;
+	private String Methodname;
+	private String MethodArgs;
+	private Long elaspedTimeMillis;
+	private Long elaspedTimeMicros;
+	private Object result;
+
+}
